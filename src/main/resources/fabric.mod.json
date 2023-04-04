@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "simple_mod",
+  "version": "${version}",
+  "name": "Simple Mod",
+  "description": "",
+  "authors": [
+    "Skyfy16"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/simple_mod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "ch.skyfy.simplemod.SimpleModMod"
+      }
+    ]
+  },
+  "mixins": [
+    "simple_mod.mixin.json"
+  ],
+  "depends": {
+    "java": ">=17",
+    "minecraft": "1.19.4",
+    "fabricloader": ">=0.14.19",
+    "fabric": "*",
+    "fabric-language-kotlin": ">=1.9.3+kotlin.1.8.20"
+  }
+}
