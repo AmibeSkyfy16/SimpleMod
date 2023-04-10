@@ -6,11 +6,17 @@ import ch.skyfy.simplemod.config.Configs
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
 import net.fabricmc.loader.api.FabricLoader
+import net.minecraft.block.NetherPortalBlock
 import net.minecraft.block.ShulkerBoxBlock
+import net.minecraft.client.gui.screen.ChatScreen
+import net.minecraft.client.option.ChatVisibility
+import net.minecraft.client.option.SimpleOption
+import net.minecraft.entity.player.PlayerEntity
 import net.minecraft.item.BlockItem
 import net.minecraft.item.ItemStack
 import net.minecraft.nbt.NbtCompound
 import net.minecraft.nbt.NbtList
+import net.minecraft.server.PlayerManager
 import net.minecraft.util.TypedActionResult
 import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
@@ -32,6 +38,7 @@ class SimpleModMod : ModInitializer {
 
     override fun onInitialize() {
         registerCommands()
+//        NetherPortalBlock
     }
 
     private fun registerCommands() = CommandRegistrationCallback.EVENT.register { dispatcher, _, _ -> SurvivalCmd.register(dispatcher) }
